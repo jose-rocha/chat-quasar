@@ -28,7 +28,7 @@
     <q-list bordered separator>
 
       <q-item clickable v-ripple v-for="(n, index) in 20" :key="index">
-        <q-avatar class="q-mx-sm" color="blue" size="2.5em" text-color="white">U</q-avatar>
+        <q-avatar class="q-mx-sm" color="primary" size="2.5em" text-color="white">U</q-avatar>
         <q-item-section>John Dee</q-item-section>
       </q-item>
 

@@ -13,20 +13,29 @@
         <q-fab-action color="info" @click="onClick" icon="mdi-account" />
       </q-fab>
       <div  style="flex:9">
-        <q-input filled dense placeholder="mensagem"/>
+        <q-input
+        v-model="turnIntoPhone"
+        filled dense placeholder="mensagem"/>
       </div>
-      <q-icon name="mdi-microphone" size="2em" style="flex:0.5; cursor: pointer;"/>
+      <q-icon :name="turnIntoPhone === '' ? 'mdi-microphone' : 'mdi-send'"
+      size="2em" style="flex:0.5; cursor: pointer;"/>
+      <!-- <q-icon name="mdi-send" size="2em" style="flex:0.5; cursor: pointer;"/> -->
     </div>
   </q-footer>
 </template>
 
 <script>
+import { ref } from 'vue';
+
 export default {
   setup() {
+    const turnIntoPhone = ref('');
+
     return {
       onClick() {
         // console.log('Clicked on a fab action')
       },
+      turnIntoPhone,
     };
   },
 };
