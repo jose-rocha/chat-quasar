@@ -11,7 +11,7 @@
               name="search" size="1.3em" class="q-mr-md" color="white"
               @click="toggleRightDrawer"
             />
-            <DostVertical />
+            <DostVerticalRight />
           </div>
         </div>
       </q-bar>
@@ -28,7 +28,7 @@
 <script>
 import { defineComponent } from 'vue';
 import ChatTalking from 'src/components/ChatTalking.vue';
-import DostVertical from 'src/components/DostVertical.vue';
+import DostVerticalRight from 'src/components/DostVerticalRight.vue';
 import DrawerRight from 'src/components/DrawerRight.vue';
 import { useStoreDrawer } from 'src/stores/drawerRight';
 import DrawerLeft from '../components/DrawerLeft.vue';
@@ -37,7 +37,7 @@ import FooterMessage from '../components/FooterMessage.vue';
 export default defineComponent({
   name: 'IndexPage',
   components: {
-    DostVertical,
+    DostVerticalRight,
     DrawerLeft,
     FooterMessage,
     DrawerRight,
